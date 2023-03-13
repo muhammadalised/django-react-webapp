@@ -1,10 +1,11 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 export class Header extends Component {
   render() {
     return (
       <nav className="navbar navbar-expand-sm bg-light">
-        <div className="container-fluid">
+        <div className="container">
           <a className="navbar-brand" href="#">
             Lead Managers
           </a>
@@ -19,10 +20,19 @@ export class Header extends Component {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarScroll">
-            {/* <ul className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-              
-                </ul> */}
+          <div className="collapse navbar-collapse">
+            <ul className="navbar-nav ml-auto mt-2 my-lg-0">
+              <li className="nav-item">
+                <Link to="/register" className="nav-link">
+                  Register
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/login" className="nav-link">
+                  Login
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
       </nav>
